@@ -1,0 +1,10 @@
+{
+    "dependencies": [
+        "require jquery",
+        "require raptor-widgets",
+        "../../global-style",
+        "style.less",
+        "../../components/button",
+        "../../components/search-form"
+    ]
+}
