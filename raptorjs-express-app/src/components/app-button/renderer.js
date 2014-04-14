@@ -13,8 +13,7 @@ exports.tag = {
         toggle: 'boolean',
         toggled: 'boolean',
         dropdown: 'boolean',
-        '*': 'string',
-        'w:event-click': null
+        '*': 'string'
     }
 };
 
