@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>raptor-templates-express-app</title>
+    <link href="/static/reset.css" rel="stylesheet" type="text/css" media="all">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/static/style.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+    <h1>raptor-templates-express-app</h1>
+    
+    <p>
+        Hello $data.name! You have $data.count new messages!
+    </p>
+
+    <ul c-if="notEmpty(data.colors)">
+        <li style="color: $color" c-for="color in data.colors">
+            $color
+        </li>
+    </ul>
+    <div c-else>
+        No colors!
+    </div>
+
+    <h2>Custom Tags</h2>
+    <ul>
+        <li>
+            <app-hello-template name="Frank"/>
+        </li>
+        <li>
+            <app-hello-renderer name="John"/>
+        </li>
+        <li>
+            <p>
+                <app-button label="Default"/>
+                <app-button label="Primary" variant="primary"/>
+                <app-button label="Success" variant="success"/>
+                <app-button label="Info" variant="info"/>
+                <app-button label="Warning" variant="warning"/>
+                <app-button label="Danger" variant="danger"/>
+                <app-button label="Link" variant="link"/>
+            </p>
+            <p>
+                <app-button label="Large button" variant="primary" size="lg"/>
+                <app-button label="Large button" size="lg"/>
+            </p>
+            <p>
+                <app-button label="Default button" variant="primary"/>
+                <app-button label="Default button"/>
+            </p>
+            <p>
+                <app-button label="Small button" variant="primary" size="sm"/>
+                <app-button label="Small button" size="small"/>
+            </p>
+            <p>
+                <app-button label="Small button" variant="primary" size="xs"/>
+                <app-button label="Small button" size="xs"/>
+            </p>
+        </li>
+    </ul>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>
