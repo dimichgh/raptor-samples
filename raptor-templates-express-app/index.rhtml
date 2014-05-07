@@ -9,10 +9,10 @@
     <link href="/static/style.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body>
-    <h1>raptor-templates-express-app</h1>
+    <app-header title="raptor-templates-express-app"/>
     
     <p>
-        Hello $data.name! You have $data.count new messages!
+        <app-hello name="${data.name}"/> You have $data.count new messages!
     </p>
 
     <ul c-if="notEmpty(data.colors)">
@@ -25,10 +25,6 @@
     </div>
 
     <h2>Custom Tags</h2>
-
-    <p>
-        <app-hello-template name="Frank"/>
-    </p>
     <p>
         <app-hello-renderer name="John"/>
     </p>
@@ -44,6 +40,8 @@
         <app-button label="Danger" variant="danger"/>
         <app-button label="Link" variant="link"/>
     </p>
+
+    <c-include template="./footer.rhtml"/>
 
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </body>
