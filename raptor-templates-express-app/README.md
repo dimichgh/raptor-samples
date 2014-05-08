@@ -6,8 +6,8 @@ This sample app illustrates how to integrate Raptor Templates with a very basic 
 # Installation
 
 ```
-git clone https://github.com/raptorjs3/samples.git
-cd samples/raptor-templates-express-app
+git clone https://github.com/raptorjs3/raptor-samples.git
+cd raptor-samples/raptor-templates-express-app
 npm install
 node server
 ```
