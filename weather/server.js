@@ -2,14 +2,6 @@ var express = require('express');
 var raptorOptimizer = require('raptor-optimizer');
 var config = require('./config');
 
-require('view-engine').configure({
-    engines: {
-        'view-engine-raptor': {
-            extensions: ['rhtml']
-        }
-    }
-});
-
 config.load(function(err, config) {
     var app = express();
 

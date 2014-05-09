@@ -21,8 +21,6 @@
     "raptor-optimizer": "^0.2.33-beta",
     "raptor-templates": "^0.2.20-beta",
     "raptor-args": "^0.1.12-beta",
-    "view-engine": "^0.1.2-beta",
-    "view-engine-raptor": "^0.1.2-beta",
     "browser-refresh": "^0.1.0-beta",
     "bootstrap": "https://github.com/twbs/bootstrap/tarball/v3.1.1",
     "raptor-widgets": "^0.2.7-beta",

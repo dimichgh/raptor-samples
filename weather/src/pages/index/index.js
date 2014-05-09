@@ -1,4 +1,4 @@
-var template = require('view-engine').load(require.resolve('./template.rhtml'));
+var template = require('raptor-templates').load(require.resolve('./template.rhtml'));
 var weatherService = require('../../services/weather-service');
 
 module.exports = function(req, res) {
