@@ -1,9 +1,0 @@
-{
-    "raptor-optimizer": {
-        "fileWriter": {
-            "checksumsEnabled": true
-        },
-        "minify": true,
-        "bundlingEnabled": true
-    }
-}

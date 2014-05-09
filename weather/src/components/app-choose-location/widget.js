@@ -3,7 +3,7 @@ function Widget() {
     console.log('Initializing ' + __filename);
     var _this = this;
 
-    this.$().submit(function() {
+    this.$().submit(function(event) {
         event.preventDefault();
         _this.handleSubmit();
     });
