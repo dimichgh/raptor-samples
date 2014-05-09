@@ -17,6 +17,8 @@ module.exports = function render(data, context) {
     if (!precipitationRate) {
         precipitationRate = 'None';
         precipitationType = 'Precipitation';
+    } else {
+        precipitationRate += ' mm/hour';
     }
 
     var viewModel = {
