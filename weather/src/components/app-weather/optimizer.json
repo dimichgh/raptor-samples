@@ -1,0 +1,8 @@
+{
+    "dependencies": [
+        "require raptor-widgets",
+        "require ./widget",
+        "style.css",
+        "../app-choose-location"
+    ]
+}

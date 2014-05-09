@@ -1,0 +1,7 @@
+{
+    "dependencies": [
+        "reset.css",
+        "../third-party/bootstrap",
+        "global.css"
+    ]
+}

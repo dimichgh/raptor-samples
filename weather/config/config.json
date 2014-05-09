@@ -1,0 +1,16 @@
+{
+    "port": 8080,
+    "raptor-optimizer": {
+        "fileWriter": {
+            "url-prefix": "/static",
+            "outputDir": "static",
+            "checksumsEnabled": false
+        },
+
+        "minify": false,
+        "bundlingEnabled": false,
+        "transforms": [
+            "raptor-optimizer-resolve-css-urls"
+        ]
+    }
+}
