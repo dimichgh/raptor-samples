@@ -12,6 +12,13 @@ module.exports = function render(data, context) {
     var precipitationType = weatherData.precipitationType;
     precipitationType = precipitationType.charAt(0).toUpperCase() + precipitationType.substring(1);
 
+    var precipitationRate = weatherData.precipitationRate;
+
+    if (!precipitationRate) {
+        precipitationRate = 'None';
+        precipitationType = 'Precipitation';
+    }
+
     var viewModel = {
         temp: parseInt(tempConv.k2f(currentTempK)+0.5, 10) + ' °F',
         low: parseInt(tempConv.k2f(lowTempK)+0.5, 10) + ' °F',
@@ -25,7 +32,7 @@ module.exports = function render(data, context) {
         windSpeedDesc: weatherData.windSpeedDesc,
         windDegrees: weatherData.windDegrees,
         windDirection: weatherData.windDirection,
-        precipitationRate: weatherData.precipitationRate,
+        precipitationRate: precipitationRate,
         precipitationType: precipitationType
     };
 
