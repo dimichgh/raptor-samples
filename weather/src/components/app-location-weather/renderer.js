@@ -7,6 +7,7 @@ module.exports = function render(data, context) {
 
     template.render({
         weatherData: weatherData,
-        location: location
+        location: location || weatherData.requestedLocation,
+        invalidLocation: location == null
     }, context);
 };

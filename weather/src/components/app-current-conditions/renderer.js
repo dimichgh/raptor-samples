@@ -10,7 +10,7 @@ module.exports = function render(data, context) {
     var highTempK = weatherData.tempHigh;
 
     var precipitationType = weatherData.precipitationType;
-    precipitationType = precipitationType.charAt(0).toUpperCase() + precipitationType.substring(1);
+    precipitationType = precipitationType ? precipitationType.charAt(0).toUpperCase() + precipitationType.substring(1) : null;
 
     var precipitationRate = weatherData.precipitationRate;
 

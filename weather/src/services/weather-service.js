@@ -35,6 +35,6 @@ exports.getCurrentWeather = function(options, callback) {
             return callback('Request to ' + url + ' return status code ' + response.statusCode);
         }
 
-        weatherServiceUtil.parseCurrentWeatherXml(body, callback);
+        weatherServiceUtil.parseCurrentWeatherXml(body, options, callback);
     });
 };

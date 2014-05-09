@@ -1,10 +1,19 @@
 var xml2js = require('xml2js');
 var baseIconUrl = 'http://openweathermap.org/img/w/';
 
-exports.parseCurrentWeatherXml = function(xml, callback) {
+exports.parseCurrentWeatherXml = function(xml, options, callback) {
+
+    var requestedLocation = options.query || options.location;
+    var result = {
+        requestedLocation: requestedLocation
+    };
+
     xml2js.parseString(xml, { explicitArray: false, mergeAttrs: true }, function(err, parsed) {
         
-        var result = {};
+        
+        if (!parsed) {
+            return callback(null, result);
+        }
 
         var current = parsed.current;
 
@@ -73,6 +82,8 @@ exports.parseCurrentWeatherXml = function(xml, callback) {
 
             result.desc = weather.value;
         }
+
+        
         
         callback(null, result);    
     });
