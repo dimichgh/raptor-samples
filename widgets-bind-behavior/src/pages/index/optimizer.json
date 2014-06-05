@@ -1,0 +1,6 @@
+{
+    "dependencies": [
+        "require raptor-widgets",
+        "require ./widget"
+    ]
+}
