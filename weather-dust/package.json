@@ -37,6 +37,6 @@
     "view-engine-dust": "^0.1.1-beta",
     "raptor-dust": "^0.3.7-beta",
     "view-engine-raptor": "^0.1.4-beta",
-    "dustjs-linkedin":  "https://github.com/patrick-steele-idem/dustjs.git#master"
+    "dustjs-linkedin": "^2.3.5"
   }
 }
