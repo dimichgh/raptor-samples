@@ -1,4 +1,4 @@
-Sample App: Weather
+Sample App: Weather (Raptor Templates)
 ======================================
 
 This sample app utilizes the following RaptorJS modules:
@@ -83,5 +83,5 @@ Unless the `NODE_ENV` environment variable is set to `production`, the applicati
 env NODE_ENV=production node server
 ```
 
-Now navigate back to [http://localhost:8080/](http://localhost:8080/) and you should see less `<script>` and `<link>` tags (as a result of resource aggregation) and all source code should minified.
+Now navigate back to [http://localhost:8080/](http://localhost:8080/) and you should see less `<script>` and `<link>` tags (as a result of resource aggregation) and all source code should be minified.
 
