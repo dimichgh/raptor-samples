@@ -1,5 +1,5 @@
 {
-  "name": "raptorjs-express-app",
+  "name": "weather-dust",
   "version": "0.0.0",
   "description": "Sample Express-based server app that integrates various RaptorJS modules (including raptor-templates, raptor-optimizer and raptor-widgets)",
   "main": "server.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/raptorjs3/samples.git"
+    "url": "https://github.com/raptorjs3/raptor-samples.git"
   },
   "author": "Patrick Steele-idem <pnidem@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/raptorjs3/samples/issues"
+    "url": "https://github.com/raptorjs3/raptor-samples/issues"
   },
-  "homepage": "https://github.com/raptorjs3/samples",
+  "homepage": "https://github.com/raptorjs3/raptor-samples",
   "dependencies": {
     "express": "^3.5.1",
     "raptor-optimizer": "^0.2.33-beta",
@@ -38,5 +38,6 @@
     "raptor-dust": "^0.3.7-beta",
     "view-engine-raptor": "^0.1.4-beta",
     "dustjs-linkedin": "^2.3.5"
-  }
+  },
+  "private": true
 }
