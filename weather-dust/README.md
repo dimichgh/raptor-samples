@@ -1,10 +1,12 @@
-Sample App: Weather
+Sample App: Weather (Dust)
 ======================================
 
 This sample app utilizes the following RaptorJS modules:
 
 * [raptor-optimizer](https://github.com/raptorjs3/raptor-optimizer)
-* [raptor-templates](https://github.com/raptorjs3/raptor-templates)
+* [dustjs-linkedin](https://github.com/linkedin/dustjs)
+* [view-engine](https://github.com/patrick-steele-idem/view-engine)
+* [view-engine-dust](https://github.com/patrick-steele-idem/view-engine-dust)
 * [raptor-args](https://github.com/raptorjs3/raptor-args)
 * [raptor-widgets](https://github.com/raptorjs3/raptor-widgets)
 * [raptor-renderer](https://github.com/raptorjs3/raptor-renderer)
@@ -13,7 +15,7 @@ This sample app utilizes the following RaptorJS modules:
 
 ```
 git clone https://github.com/raptorjs3/raptor-samples.git
-cd raptor-samples/weather
+cd raptor-samples/weather-dust
 npm install
 node server
 ```
@@ -57,13 +59,13 @@ browser-refresh
     ├── global-style/ # Module to control the style of all pages
     │   └── ...
     ├── layouts/ # Layout templates
-    │   └── default-layout.rhtml
+    │   └── default-layout.dust
     ├── pages/ # Top-level page modules
     │   └── index/ # The main index page
     │       ├── index.js # Page middleware
     │       ├── optimizer.json # Page dependencies
     │       ├── style.less # Page-specific style
-    │       └── template.rhtml # Page template
+    │       └── template.dust # Page template
     ├── raptor-taglib.json # raptor-templates taglib definition
     ├── services/
     │   ├── package.json # Browser override configured in package.json
@@ -83,5 +85,5 @@ Unless the `NODE_ENV` environment variable is set to `production`, the applicati
 env NODE_ENV=production node server
 ```
 
-Now navigate back to [http://localhost:8080/](http://localhost:8080/) and you should see less `<script>` and `<link>` tags (as a result of resource aggregation) and all source code should minified.
+Now navigate back to [http://localhost:8080/](http://localhost:8080/) and you should see less `<script>` and `<link>` tags (as a result of resource aggregation) and all source code should be minified.
 
