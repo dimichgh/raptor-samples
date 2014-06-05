@@ -9,6 +9,7 @@
 
         "minify": false,
         "bundlingEnabled": false,
+        "enabledExtensions": ["raptor-logging/browser"],
         "transforms": [
             "raptor-optimizer-resolve-css-urls"
         ]

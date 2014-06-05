@@ -5,6 +5,7 @@
         },
         "minify": true,
         "bundlingEnabled": true,
+        "enabledExtensions": [],
         "bundles": [
             {
                 "name": "jquery",
