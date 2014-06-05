@@ -3,5 +3,5 @@
         <label class="sr-only" for="{widget.id}-query">City or Zip</label>
         <input type="text" class="form-control" name="q" id="{widget.id}-query" placeholder="Zip or City">
     </div>
-    {@app-button type="submit" label="Go" id="go" variant="primary" /}
+    {@sample-button type="submit" label="Go" id="go" variant="primary" /}
 {/widget}

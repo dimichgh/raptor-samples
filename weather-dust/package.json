@@ -37,7 +37,8 @@
     "view-engine-dust": "^0.1.1-beta",
     "raptor-dust": "^0.3.7-beta",
     "view-engine-raptor": "^0.1.4-beta",
-    "dustjs-linkedin": "^2.3.5"
+    "dustjs-linkedin": "^2.3.5",
+    "raptor-sample-ui-components": "0.1.0-beta"
   },
   "private": true
 }

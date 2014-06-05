@@ -30,7 +30,8 @@
     "raptor-renderer": "^0.2.3-beta",
     "temp-units-conv": "^0.1.1",
     "request": "^2.34.0",
-    "xml2js": "^0.4.2"
+    "xml2js": "^0.4.2",
+    "raptor-sample-ui-components": "^0.1.0-beta"
   },
   "private": true
 }
