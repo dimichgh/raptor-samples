@@ -1,0 +1,6 @@
+{
+    "dependencies": [
+        "../third-party/bootstrap",
+        "global.css"
+    ]
+}

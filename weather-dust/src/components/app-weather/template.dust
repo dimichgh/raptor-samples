@@ -1,0 +1,11 @@
+{@widget class="weather" module=widgetPath}
+    {@app-choose-location widgetId="chooseLocation" /}
+    
+    <progress id="{widget.id}-loading" class="loading">Loading...</progress>
+    
+    <div id="{widget.id}-weatherContainer" class="weather-container" style="{?weatherData}display:block{/weatherData}">
+        {?weatherData}
+        {@app-location-weather weatherData=weatherData /}
+        {/weatherData}
+    </div>
+{/widget}

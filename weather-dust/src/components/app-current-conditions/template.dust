@@ -1,0 +1,47 @@
+<table>
+    <tr>
+        <td>
+            {?iconUrl}
+            <img src="{iconUrl}" alt="{description}">
+            {/iconUrl}
+        </td>
+        <td>
+            <span class="current-temp">{temp}</span>
+            <div>
+                High: {high}
+            </div>
+            <div>
+                Low: {low}
+            </div>
+            <div>
+                {description}
+            </div>
+        </td>
+    </tr>
+</table>
+<table class="weather-table table table-striped table-bordered table-condensed">
+    <tbody>
+        <tr>
+            <td>Wind</td>
+            <td>{windSpeedDesc} {windSpeed} m/s <br>{windDirection} ({windDegrees}°)</td>
+        </tr>
+        <tr>
+            <td>Cloudiness</td>
+            <td>{cloudiness}</td>
+        </tr>
+        <tr>
+            <td>Pressure</td>
+            <td>{pressure}</td>
+        </tr>
+        <tr>
+            <td>Humidity</td>
+            <td>{humidity}</td>
+        </tr>
+        {?precipitationType}
+        <tr>
+            <td>{precipitationType}</td>
+            <td>{precipitationRate}</td>
+        </tr>
+        {/precipitationType}
+    </tbody>
+</table>

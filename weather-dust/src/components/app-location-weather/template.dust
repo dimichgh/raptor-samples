@@ -1,0 +1,11 @@
+<h3 class="location">Weather for {location}</h3>
+{?invalidLocation}
+<div class="alert alert-warning">
+    Invalid Location
+</div>
+{:else}
+<div class="weather-panel">
+    <h4>Current Conditions</h4>
+    {@app-current-conditions weatherData=weatherData /}
+</div>
+{/invalidLocation}

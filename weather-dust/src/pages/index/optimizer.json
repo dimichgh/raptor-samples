@@ -1,0 +1,9 @@
+{
+    "dependencies": [
+        "require jquery",
+        "../../global-style",
+        "style.less",
+        "../../components/app-weather",
+        "require-run: ./client-init"
+    ]
+}

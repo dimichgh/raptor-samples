@@ -1,0 +1,26 @@
+{
+    "port": 8081,
+    "raptor-optimizer": {
+        "fileWriter": {
+            "url-prefix": "/static",
+            "outputDir": "static",
+            "checksumsEnabled": false
+        },
+
+        "minify": false,
+        "bundlingEnabled": false,
+        "transforms": [
+            "raptor-optimizer-resolve-css-urls"
+        ]
+    },
+    "view-engine": {
+        "engines": {
+            "view-engine-dust": {
+                "extensions": ["dust"]
+            },
+            "view-engine-raptor": {
+                "extensions": ["rhtml"]
+            }
+        }    
+    }
+}

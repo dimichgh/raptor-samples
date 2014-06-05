@@ -1,0 +1,11 @@
+{@optimizer-page name="index" packagePath=optimizerPackagePath /}
+
+{@layout-use template=layoutTemplate}
+    {@layout-put into="title" value="Home" /}
+    {@layout-put into="body"}
+        <h2>Weather Forecast</h2>
+        {@async-fragment dataProvider=weatherDataProvider var="weatherData"}
+            {@app-weather weatherData=weatherData /}
+        {/async-fragment}
+    {/layout-put}
+{/layout-use}
