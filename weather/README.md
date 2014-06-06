@@ -44,10 +44,12 @@ browser-refresh
     ├── api/ # API endpoint implementations
     │   └── weather.js
     ├── components/ # Components/custom tags
-    │   ├── app-button/
-    │   │   └── ...
     │   ├── app-choose-location/
-    │   │   └── ...
+    │   │   ├── optimizer.json # Client-side dependencies
+    │   │   ├── renderer.js # HTML renderer
+    │   │   ├── style.css # UI Component styling
+    │   │   ├── template.rhtml # HTML template
+    │   │   └── widget.js # Client-side behavior
     │   ├── app-current-conditions/
     │   │   └── ...
     │   ├── app-location-weather/
