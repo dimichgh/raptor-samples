@@ -3,13 +3,14 @@ Sample App: Weather (Dust)
 
 This sample app utilizes the following RaptorJS modules:
 
-* [raptor-optimizer](https://github.com/raptorjs3/raptor-optimizer)
 * [dustjs-linkedin](https://github.com/linkedin/dustjs)
+* [raptor-args](https://github.com/raptorjs3/raptor-args)
+* [raptor-optimizer](https://github.com/raptorjs3/raptor-optimizer)
+* [raptor-renderer](https://github.com/raptorjs3/raptor-renderer)
+* [raptor-sample-ui-components](https://github.com/raptorjs3/raptor-sample-ui-components)
+* [raptor-widgets](https://github.com/raptorjs3/raptor-widgets)
 * [view-engine](https://github.com/patrick-steele-idem/view-engine)
 * [view-engine-dust](https://github.com/patrick-steele-idem/view-engine-dust)
-* [raptor-args](https://github.com/raptorjs3/raptor-args)
-* [raptor-widgets](https://github.com/raptorjs3/raptor-widgets)
-* [raptor-renderer](https://github.com/raptorjs3/raptor-renderer)
 
 # Installation
 
@@ -46,10 +47,12 @@ browser-refresh
     ├── api/ # API endpoint implementations
     │   └── weather.js
     ├── components/ # Components/custom tags
-    │   ├── app-button/
-    │   │   └── ...
     │   ├── app-choose-location/
-    │   │   └── ...
+    │   │   ├── optimizer.json # Client-side dependencies
+    │   │   ├── renderer.js # HTML renderer
+    │   │   ├── style.css # UI Component styling
+    │   │   ├── template.dust # HTML template
+    │   │   └── widget.js # Client-side behavior
     │   ├── app-current-conditions/
     │   │   └── ...
     │   ├── app-location-weather/
@@ -72,10 +75,55 @@ browser-refresh
     │   ├── weather-service-browser.js # Browser-side version of the weather-service module
     │   ├── weather-service-util.js # Utility methods
     │   └── weather-service.js # Server-side version of the weather-service module
-    └── third-party/
-        └── bootstrap/
-            └── optimizer.json # Package up Bootstrap
+    ├── third-party/
+    │   └── bootstrap/
+    │       └── optimizer.json # Package up Bootstrap
+    ├── dust-helpers-server.js # Module to register server-side only Dust helpers
+    └── dust-helpers.js # Module to register Dust helpers
 ```
+
+## Dust Helpers
+
+Unlike with Raptor Templates, Dust requires that all helpers be explicitly registered before any templates are rendered (Raptor Templates automatically discovers taglibs based on a templates location on disk). The registration of helpers happens in the following modules:
+
+* [src/dust-helpers.js](src/dust-helpers.js) (client/server helpers)
+* [src/dust-helpers-server.js](src/dust-helpers-server.js) (server-only helpers)
+
+Those modules register Dust helpers provided by the following modules:
+
+* [raptor-optimizer](https://github.com/raptorjs3/raptor-optimizer) (server-side only)
+* [raptor-taglib-async](https://github.com/raptorjs3/raptor-taglib-async)
+* [raptor-taglib-layout](https://github.com/raptorjs3/raptor-taglib-layout)
+* [raptor-widgets](https://github.com/raptorjs3/raptor-widgets)
+* [raptor-sample-ui-components](https://github.com/raptorjs3/raptor-sample-ui-components)
+
+In addition, helpers are also registered for all of the application's UI components using code similar to the following:
+
+```javascript
+var dust = require('view-engine-dust').dust;
+var raptorDust = require('raptor-dust');
+
+raptorDust.registerHelpers({
+        'app-weather': require('./components/app-weather/renderer'),
+        'app-choose-location': require('./components/app-choose-location/renderer'),
+        'app-current-conditions': require('./components/app-current-conditions/renderer'),
+        'app-location-weather': require('./components/app-location-weather/renderer')
+    }, dust);
+```
+
+The above code binds Dust helpers to UI component renderers that encapsulate their rendering logic. With this approach, UI components are _not_ simply Dust partials. For example, sample Dust template code to embed the `app-choose-location` UI component is shown below:
+
+```html
+{@app-choose-location /}
+```
+
+Similarly, a button UI component can be embedded using the following Dust code:
+
+```html
+{@sample-button type="submit" label="Go" id="go" variant="primary" /}
+```
+
+The [sample-button](https://github.com/raptorjs3/raptor-sample-ui-components/tree/master/components/sample-button) UI component happens to use Raptor Templates to produce its HTML output, but since UI components encapsulate their rendering logic that does not matter.
 
 ## Resource Optimization
 
