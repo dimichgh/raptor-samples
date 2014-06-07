@@ -32,7 +32,8 @@
     "request": "^2.34.0",
     "xml2js": "^0.4.2",
     "raptor-sample-ui-components": "^0.1.0-beta",
-    "less": "^1.7.0"
+    "less": "^1.7.0",
+    "optimizer-plugin-inc": "git+https://github.paypal.com/nodejs/optimizer-plugin-inc.git"
   },
   "private": true
 }

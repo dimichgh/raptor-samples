@@ -1,6 +1,9 @@
 {
     "port": 8080,
     "raptor-optimizer": {
+        "plugins": {
+            "optimizer-plugin-inc": {}
+        },
         "fileWriter": {
             "url-prefix": "/static",
             "outputDir": "static",
@@ -8,7 +11,7 @@
         },
 
         "minify": false,
-        "bundlingEnabled": false,
+        "bundlingEnabled": true,
         "enabledExtensions": ["raptor-logging/browser"],
         "transforms": [
             "raptor-optimizer-resolve-css-urls"
